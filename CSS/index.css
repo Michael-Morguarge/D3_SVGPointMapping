@@ -1,0 +1,8 @@
+#Att1 {
+    min-width: fit-content;
+    min-height: fit-content;
+}
+#Att1 .fit {
+    width: 100vw;
+    height: 90vh;
+}

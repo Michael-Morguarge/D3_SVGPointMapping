@@ -1,0 +1,40 @@
+#map-test .fit {
+    margin: 0;
+    background-color: #2A2C39;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+}
+#map-test {
+    width: 100vw;
+    height: 100vh;
+}
+
+.land:not(#divider2):not(#divider1) {
+    fill: black;   /* map background colour */
+    stroke: white;
+    stroke-opacity: 1;
+    fill-opacity: .5;
+    stroke-width: 1;
+}
+
+
+.land:not(#divider2):not(#divider1):hover {
+    fill: white;   /* map background colour */
+    stroke: black;
+    stroke-opacity: 1;
+    fill-opacity: .5;
+    stroke-width: 1;
+    content: "Test";
+    color: black;
+}
+
+.context {
+    visibility: hidden;
+}
+
+.context:focus-within,
+.land:not(#divider2):not(#divider1):active + .context,
+.land:not(#divider2):not(#divider1):focus + .context {
+    visibility: visible;
+}
