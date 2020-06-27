@@ -5,17 +5,6 @@
 	<defs>
 		<link rel="stylesheet" href="../../CSS/svg.css" />
 		
-		<style type="text/css">
-			/* .land
-			{
-				fill: #CCCCCC;
-				fill-opacity: 1;
-				stroke:white;
-				stroke-opacity: 1;
-				stroke-width:0.5;
-			} */
-		</style>
-		
 		<amcharts:ammap projection="mercator" leftLongitude="-124.979930" topLatitude="49.374568" rightLongitude="-52.838841" bottomLatitude="14.808396"></amcharts:ammap>
 
 		<!-- All areas are listed in the line below. You can use this list in your script. -->
