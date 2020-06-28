@@ -4,15 +4,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 	<defs>
 		<link rel="stylesheet" href="../../CSS/svg.css" />
-
-		<div tabindex="0">
-			<nav id="context">
-				<ul>
-					<li>Test 1</li>
-					<li>Test 2</li>
-				</ul>
-			</nav>
-		</div>
 		
 		<amcharts:ammap projection="mercator" leftLongitude="-124.979930" topLatitude="49.374568" rightLongitude="-52.838841" bottomLatitude="14.808396"></amcharts:ammap>
 

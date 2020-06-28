@@ -2,7 +2,26 @@
     min-width: fit-content;
     min-height: fit-content;
 }
-#Att1 .fit {
+
+#Att1, #map-test, .fit {
     width: 100vw;
     height: 90vh;
+}
+
+#context {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: #212121;
+    color: #ffffff;
+    border: 0px solid #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: arial;
+}
+
+.fit {
+    cursor: pointer;
 }

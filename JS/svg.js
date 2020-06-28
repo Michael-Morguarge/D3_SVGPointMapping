@@ -1,6 +1,10 @@
 $(function(){
     window.setTimeout(function(){
         let land = $($('.fit')[0].contentDocument.getElementsByClassName('land'));
+
+        land.each(function(data){
+            this.setAttribute('data-info', '<b>' + Math.random() + '</b>');
+        });
         
         land.on('mousedown', ({ offsetX, offsetY }) => {
             if (this.attr('id') !== "divider1" && this.attr('id') !== "divider2") {
@@ -10,6 +14,20 @@ $(function(){
             }
         });
     }, 3000);
+
+    $("path").click(function(e) {
+        $("#context").css("display", "block");
+        $("#context").html($(this).data("info"));
+    });
+    
+    $("path").mouseleave(function(e) {
+        $("#context").css("display", "none");
+    });
+
+    $(document).mousemove(function(e) {
+        $("#context").css("top", e.pageY - $("#context").height() - 35);
+        $("#context").css("left", e.pageX - $("context").width() / 2);
+    }).click();
 
     // let test = d3.xml('../Resources/Images/usaTerritories2High.svg', function(error, xml){
     //     if (error) throw error;
