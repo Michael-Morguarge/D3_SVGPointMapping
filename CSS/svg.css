@@ -1,11 +1,12 @@
-#map-test .fit {
+#map-test .fit, #map-test1 .fit {
     margin: 0;
     background-color: #2A2C39;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: 200;
     font-size: 17px;
 }
-#map-test {
+
+#map-test, #map-test1 {
     width: 100vw;
     height: 100vh;
 }
@@ -18,7 +19,6 @@
     stroke-width: 1;
 }
 
-
 .land:not(#divider2):not(#divider1):hover {
     fill: white;   /* map background colour */
     stroke: black;
@@ -29,12 +29,12 @@
     color: black;
 }
 
-.context {
+#context {
     visibility: hidden;
 }
 
-.context:focus-within,
-.land:not(#divider2):not(#divider1):active + .context,
-.land:not(#divider2):not(#divider1):focus + .context {
+#context:focus-within,
+.land:not(#divider2):not(#divider1):active + #context,
+.land:not(#divider2):not(#divider1):focus + #context {
     visibility: visible;
 }

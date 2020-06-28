@@ -1,17 +1,22 @@
 $(function(){
-    // $('.fit').on('load', function(){
-        const aObject = $('.fit');
-
-        let svgDoc = document.getElementsByClassName('fit')[0];
-        console.log(svgDoc);    
-        let land = document.getElementsByClassName('fit')[0].contentDocument.getElementsByClassName('land');
-        let menu = $('.context');
-
+    window.setTimeout(function(){
+        let land = $($('.fit')[0].contentDocument.getElementsByClassName('land'));
+        
         land.on('mousedown', ({ offsetX, offsetY }) => {
-            menu.style.top = offsetY + 'px';
-            menu.style.left = offsetX + 'px';
+            if (this.attr('id') !== "divider1" && this.attr('id') !== "divider2") {
+                let menu = $('#context');
+                menu.style.top = offsetY + 'px';
+                menu.style.left = offsetX + 'px';
+            }
         });
-    // })
+    }, 3000);
+
+    // let test = d3.xml('../Resources/Images/usaTerritories2High.svg', function(error, xml){
+    //     if (error) throw error;
+    // }).then(function(data){
+    //     console.log(data);
+    //     $('#map-test1').append(data.documnetElement);
+    // });
 
     var svg = function(width, height, idName) {
         let projection =
