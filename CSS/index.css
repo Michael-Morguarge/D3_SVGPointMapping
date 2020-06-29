@@ -2,7 +2,29 @@
     min-width: fit-content;
     min-height: fit-content;
 }
-#Att1 .fit {
-    width: 100vw;
-    height: 90vh;
+
+#Att1, #map-test, .fit {
+    width: calc(95vw - 35px);
+    height: calc(90vh - 35px);
+}
+
+#context {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: darkgrey;
+    border-radius: 3px;
+    padding: 10px;
+    font-family: arial;
+}
+
+.data {
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+.fit {
+    background-color: gainsboro;
 }

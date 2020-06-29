@@ -1,17 +1,29 @@
 $(function(){
-    // $('.fit').on('load', function(){
-        const aObject = $('.fit');
+    window.setTimeout(function(){
+        let land = $($('.fit')[0].contentDocument.getElementsByClassName('land'));
+        
+        land.each(function(data) {
+            if (this.id !== 'divider1' && this.id !== 'divider2') {
+                let menu = $('#context');
+                let content = $('#context').find('.data');
 
-        let svgDoc = document.getElementsByClassName('fit')[0];
-        console.log(svgDoc);    
-        let land = document.getElementsByClassName('fit')[0].contentDocument.getElementsByClassName('land');
-        let menu = $('.context');
-
-        land.on('mousedown', ({ offsetX, offsetY }) => {
-            menu.style.top = offsetY + 'px';
-            menu.style.left = offsetX + 'px';
-        });
-    // })
+                this.setAttribute('data-info', $(this).attr('title'));
+                $(this).click(function(e) {
+                    $($('.fit')[0].contentDocument.getElementsByClassName('land')).each(function() {
+                        $(this).removeClass("selected");
+                    });
+                    if (this.id !== 'divider1' && this.id !== 'divider2') {
+                        menu.css('display', 'block');
+                        content.html($(this).data().info); // html injection :(
+                        
+                        menu.css('top', (e.pageY - menu.height()+55) + 'px');
+                        menu.css('left', (e.pageX - (menu.width()/2)) + 'px');
+                        $(this).addClass("selected");
+                    }
+                }).mousemove();
+            }
+        });    
+    }, 3000);
 
     var svg = function(width, height, idName) {
         let projection =
