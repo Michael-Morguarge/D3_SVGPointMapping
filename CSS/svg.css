@@ -4,6 +4,7 @@
     stroke-opacity: 1;
     fill-opacity: 1;
     stroke-width: 1;
+    cursor: pointer;
 }
 
 .land:not(#divider2):not(#divider1):hover {
@@ -12,6 +13,10 @@
     stroke-opacity: 1;
     fill-opacity: .5;
     stroke-width: 1;
-    content: "Test";
     color: black;
+}
+
+.selected {
+    fill: yellow !important;
+    stroke: orange !important;
 }

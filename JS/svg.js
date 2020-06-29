@@ -1,40 +1,29 @@
 $(function(){
     window.setTimeout(function(){
         let land = $($('.fit')[0].contentDocument.getElementsByClassName('land'));
-
-        land.each(function(data){
-            this.setAttribute('data-info', '<b>' + Math.random() + '</b>');
-        });
         
-        land.on('mousedown', ({ offsetX, offsetY }) => {
-            if (this.attr('id') !== "divider1" && this.attr('id') !== "divider2") {
+        land.each(function(data) {
+            if (this.id !== 'divider1' && this.id !== 'divider2') {
                 let menu = $('#context');
-                menu.style.top = offsetY + 'px';
-                menu.style.left = offsetX + 'px';
+                let content = $('#context').find('.data');
+
+                this.setAttribute('data-info', $(this).attr('title'));
+                $(this).click(function(e) {
+                    $($('.fit')[0].contentDocument.getElementsByClassName('land')).each(function() {
+                        $(this).removeClass("selected");
+                    });
+                    if (this.id !== 'divider1' && this.id !== 'divider2') {
+                        menu.css('display', 'block');
+                        content.html($(this).data().info); // html injection :(
+                        
+                        menu.css('top', (e.pageY - menu.height()+55) + 'px');
+                        menu.css('left', (e.pageX - (menu.width()/2)) + 'px');
+                        $(this).addClass("selected");
+                    }
+                }).mousemove();
             }
-        });
+        });    
     }, 3000);
-
-    $("path").click(function(e) {
-        $("#context").css("display", "block");
-        $("#context").html($(this).data("info"));
-    });
-    
-    $("path").mouseleave(function(e) {
-        $("#context").css("display", "none");
-    });
-
-    $(document).mousemove(function(e) {
-        $("#context").css("top", e.pageY - $("#context").height() - 35);
-        $("#context").css("left", e.pageX - $("context").width() / 2);
-    }).click();
-
-    // let test = d3.xml('../Resources/Images/usaTerritories2High.svg', function(error, xml){
-    //     if (error) throw error;
-    // }).then(function(data){
-    //     console.log(data);
-    //     $('#map-test1').append(data.documnetElement);
-    // });
 
     var svg = function(width, height, idName) {
         let projection =

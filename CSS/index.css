@@ -4,8 +4,8 @@
 }
 
 #Att1, #map-test, .fit {
-    width: 100vw;
-    height: 90vh;
+    width: calc(95vw - 35px);
+    height: calc(90vh - 35px);
 }
 
 #context {
@@ -14,14 +14,17 @@
     top: 0px;
     left: 0px;
     z-index: 1;
-    background-color: #212121;
-    color: #ffffff;
-    border: 0px solid #ffffff;
-    border-radius: 5px;
-    padding: 15px;
+    background-color: darkgrey;
+    border-radius: 3px;
+    padding: 10px;
     font-family: arial;
 }
 
+.data {
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
 .fit {
-    cursor: pointer;
+    background-color: gainsboro;
 }
