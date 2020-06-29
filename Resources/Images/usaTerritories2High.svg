@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<?xml-stylesheet type="text/css" href="../../CSS/svg.css" ?>
+<?xml-stylesheet type="text/css" href="../../CSS/d3_svg.css" ?>
 <!-- (c) ammap.com | SVG map of USA Territories & Associated States- High -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 	<defs>
-		<link rel="stylesheet" href="../../CSS/svg.css" />
-		
 		<amcharts:ammap projection="mercator" leftLongitude="-124.979930" topLatitude="49.374568" rightLongitude="-52.838841" bottomLatitude="14.808396"></amcharts:ammap>
 
 		<!-- All areas are listed in the line below. You can use this list in your script. -->

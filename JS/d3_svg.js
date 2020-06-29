@@ -25,6 +25,10 @@ $(function(){
         });    
     }, 1500);
 
+    d3.json('../Resources/Data/data.json', function(json) {
+        alert(json);
+    });
+
     var svg = function(width, height, idName) {
         let projection =
             d3.geoEquirectangular().center([0,0]).scale([width/(2* Math.PI)]).translate([width/2, height/2]);
