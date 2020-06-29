@@ -25,6 +25,12 @@
     color: whitesmoke;
 }
 
+#data-view {
+    font-size: large;
+    width: 400px;
+    margin-bottom: 50px;
+}
+
 .fit {
     background-color: gainsboro;
 }

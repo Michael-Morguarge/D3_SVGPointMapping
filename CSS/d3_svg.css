@@ -20,3 +20,10 @@
     fill: yellow !important;
     stroke: orange !important;
 }
+
+.data-point {
+    fill: blue;
+    stroke: red;
+    stroke-width: 1;
+    fill-opacity: .5;
+}
