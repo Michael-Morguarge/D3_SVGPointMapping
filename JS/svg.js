@@ -23,7 +23,7 @@ $(function(){
                 }).mousemove();
             }
         });    
-    }, 3000);
+    }, 1500);
 
     var svg = function(width, height, idName) {
         let projection =
