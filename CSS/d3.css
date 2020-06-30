@@ -1,11 +1,15 @@
 #Att1 {
-    min-width: fit-content;
-    min-height: fit-content;
+    min-width: 1390;
+    min-height: 850;
 }
 
 #Att1, #map-test, .fit {
     width: calc(95vw - 35px);
     height: calc(90vh - 35px);
+}
+
+#Att1 #title .space-out {
+    margin-left: 25px;
 }
 
 #context, #point-context {
