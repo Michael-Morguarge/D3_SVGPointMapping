@@ -8,7 +8,7 @@
     height: calc(90vh - 35px);
 }
 
-#context {
+#context, #point-context {
     display: none;
     position: absolute;
     top: 0px;
@@ -23,6 +23,12 @@
 .data {
     font-weight: bolder;
     color: whitesmoke;
+}
+
+#data-view {
+    font-size: large;
+    width: 400px;
+    margin-bottom: 50px;
 }
 
 .fit {

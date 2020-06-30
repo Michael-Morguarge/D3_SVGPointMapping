@@ -12,11 +12,21 @@
 </head>
 <body>
     <div id="Att1">
-        <h1 id="title">Test Map</h1>
+        <div id="title">
+            <h1>
+                Test Map for&nbsp;&nbsp;
+            </h1>
+            <select id="data-view">
+                <option value="N/A" selected="selected">Map Only</option>
+                <option value="../Resources/Data/data.json">Random Data Points</option>
+                <option value="../Resources/Data/real_data.json">Real Data Points</option>
+            </select>
+        </div>
         <div id="map-test">
             <object class="fit" type="image/svg+xml" data="../Resources/Images/usaTerritories2High.svg">Fallback</object>
         </div>
         <div id="context"><span class="data"></span></div>
+        <div id="point-context"><span class="data"></span></div>
     </div>
 </body>
 </html>
