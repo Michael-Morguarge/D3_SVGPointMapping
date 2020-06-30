@@ -7,7 +7,6 @@
     <script src="../Resources/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="../Resources/D3/d3.min.js"></script>
     <script src="../JS/d3_svg.js"></script>
-    <script src="../JS/example.js"></script>
     <link rel="stylesheet" href="../CSS/d3.css" />
 </head>
 <body>
@@ -16,11 +15,20 @@
             <h1>
                 Test Map for&nbsp;&nbsp;
             </h1>
-            <select id="data-view">
-                <option value="N/A" selected="selected">Map Only</option>
-                <option value="../Resources/Data/data.json">Random Data Points</option>
-                <option value="../Resources/Data/real_data.json">Real Data Points</option>
-            </select>
+            <span class="space-out">
+                <select id="data-view">
+                    <option value="N/A" selected="selected">Map Only</option>
+                    <option value="../Resources/Data/data.json">Random Data Points</option>
+                    <option value="../Resources/Data/real_data.json">Real Data Points</option>
+                </select>
+            </span>
+            <span class="space-out">
+                <input type="radio" id="allow-compare" name="compare-mode" value="1" />
+                <label for="allow-comapre">Multi-Select Mode</label>
+                <input type="radio" id="not-allow-compare" name="compare-mode" value="0" checked />
+                <label for="not-allow-compare">Single-Select Mode</label>
+            </span>
+            <span id="data-table" class="space-out">Selected Point Values:&nbsp;</span>
         </div>
         <div id="map-test">
             <object class="fit" type="image/svg+xml" data="../Resources/Images/usaTerritories2High.svg">Fallback</object>
