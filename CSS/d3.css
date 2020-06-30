@@ -8,7 +8,7 @@
     height: calc(90vh - 35px);
 }
 
-#context {
+#context, #point-context {
     display: none;
     position: absolute;
     top: 0px;

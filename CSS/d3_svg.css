@@ -22,8 +22,9 @@
 }
 
 .data-point {
-    fill: blue;
+    fill: green;
     stroke: red;
     stroke-width: 1;
     fill-opacity: .5;
+    cursor: pointer;
 }

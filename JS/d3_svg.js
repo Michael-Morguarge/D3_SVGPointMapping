@@ -35,30 +35,38 @@ $(function(){
 
         let valueSelected = $(this).val() ?? null;
         
-        if (valueSelected) {
+        if (valueSelected && valueSelected !== 'N/A') {
             d3.json(valueSelected).then(function(json) {
                 console.log(json.SetName);
                 
                 let theSVG = $($('.fit')[0].contentDocument.getElementsByTagName('svg')[0]);
                 let dataPoints = $(theSVG.find('#data-points'));
-                
+                dataPoints.html('');
+
                 if (dataPoints.length <= 0) {
-                    $(theSVG).append('<g/>');
-                    dataPoints = $($(theSVG.find('g')[1]));
-                    dataPoints.attr('id', 'data-points');
+                    let node = CreateSvgItem('g', { id: "data-points" });
+                    theSVG.append(node);
+                    dataPoints = $($(theSVG.find('#data-points')[0]));
                 }
                 i = 0;
 
                 json.Data.forEach(function(value) {
-                    dataPoints.append(
-                        CreateSvgItem('circle', { cx: value.X, cy: value.Y, r: 5, class: "data-point" })
-                    );
+                    let size = Math.round((Math.random() * 100000) % 30) + 1;
+                    let node = CreateSvgItem('circle', { cx: value.X, cy: value.Y, r: size, class: "data-point" });
+                    dataPoints.append(node);
                     let circle = $(dataPoints.find('.data-point:last')[0]);
                     circle.html(++i);
-                    
-                    //circle.click()
+
+                    circle.click(function() {
+                        console.log('Clicked circle-' + $(this).html())
+                    });
                 });
             });
+        }
+        else if (valueSelected && valueSelected === 'N/A') {
+            let theSVG = $($('.fit')[0].contentDocument.getElementsByTagName('svg')[0]);
+            let dataPoints = $(theSVG.find('#data-points'));
+            dataPoints.html('');
         }
     });
 
